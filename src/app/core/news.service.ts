@@ -5,7 +5,7 @@ import 'rxjs/add/operator/map'
 @Injectable()
 export class NewsService {
 
-  baseURL = 'https://newsapi.org/v1/articles?source=techcrunch'
+  baseURL = 'https://newsapi.org/v1/articles?source=bloomberg'
   apiKey = '66e2c8980e0d4b83a5e0c737837c06ec';
 
   constructor(private http: Http) {
