@@ -8,7 +8,8 @@ import { NewsListComponent } from './news-list/news-list.component';
 import { NewsItemComponent } from './news-item/news-item.component'
 
 import{ NewsService } from './core/news.service';
-
+import {MdGridListModule} from '@angular/material';
+import {MdCardModule} from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,9 @@ import{ NewsService } from './core/news.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpModule
+    HttpModule,
+    MdCardModule,
+    MdGridListModule
   ],
   providers: [NewsService],
   bootstrap: [AppComponent]

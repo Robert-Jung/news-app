@@ -1,6 +1,11 @@
-<div class="card col-xs-4">
-    <img class="card-img" [src]="article.urlToImage" style="width: 25rem">
-    <div class="card-img-overlay">
-        <h4 class="card-title">{{article.title}}</h4>
-    </div>
-</div>
+<md-card class="card">
+  <md-card-header>
+    <md-card-title>{{article.title}}</md-card-title>
+  </md-card-header>
+  <img md-card-image [src]="article.urlToImage">
+  <md-card-content>
+    <p>{{article.description}}</p>
+  </md-card-content>
+</md-card>
+
+
