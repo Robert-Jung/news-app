@@ -7,22 +7,27 @@ import { AppComponent } from './app.component';
 import { NewsListComponent } from './news-list/news-list.component';
 import { NewsItemComponent } from './news-item/news-item.component'
 
-import{ NewsService } from './core/news.service';
-import {MdGridListModule} from '@angular/material';
-import {MdCardModule} from '@angular/material';
+import { NewsService } from './core/news.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { MdCardModule, MdSidenavModule } from '@angular/material';
+import { SourceListComponent } from './source-list/source-list.component';
+import { SourceListItemComponent } from './source-list-item/source-list-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NewsListComponent,
-    NewsItemComponent
+    NewsItemComponent,
+    SourceListComponent,
+    SourceListItemComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpModule,
+    BrowserAnimationsModule,
     MdCardModule,
-    MdGridListModule
+    MdSidenavModule
   ],
   providers: [NewsService],
   bootstrap: [AppComponent]
