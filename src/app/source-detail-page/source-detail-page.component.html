@@ -1,0 +1,16 @@
+<md-sidenav-container>
+    <md-sidenav mode="side" opened="true">
+    </md-sidenav>
+        <md-grid-list cols="3" rowHeight="1:1">
+        <md-grid-tile
+        *ngFor="let article of articles" >
+            <div class="container">
+                <img [src]="article.urlToImage" class="image">
+                <div class="overlay">
+                    <div class="text">{{article.title}}</div>
+                </div>
+            </div>
+        </md-grid-tile>
+    </md-grid-list>
+</md-sidenav-container>
+
