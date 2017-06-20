@@ -1,11 +1,6 @@
-<md-card class="card">
-  <md-card-header>
-    <md-card-title>{{article.title}}</md-card-title>
-  </md-card-header>
-  <img md-card-image [src]="article.urlToImage">
-  <md-card-content>
-    <p>{{article.description}}</p>
-  </md-card-content>
-</md-card>
-
-
+ <div class="container">
+    <img [src]="article.urlToImage" class="image">
+    <div class="overlay">
+        <div class="text">{{article.title}}</div>
+    </div>
+</div>

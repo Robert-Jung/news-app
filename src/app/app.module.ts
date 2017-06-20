@@ -9,9 +9,10 @@ import { NewsItemComponent } from './news-item/news-item.component'
 
 import { NewsService } from './core/news.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
-import { MdCardModule, MdSidenavModule } from '@angular/material';
+import { MdSidenavModule, MdGridListModule } from '@angular/material';
 import { SourceListComponent } from './source-list/source-list.component';
 import { SourceListItemComponent } from './source-list-item/source-list-item.component';
+import { SourceDetailPageComponent } from './source-detail-page/source-detail-page.component';
 
 @NgModule({
   declarations: [
@@ -19,15 +20,16 @@ import { SourceListItemComponent } from './source-list-item/source-list-item.com
     NewsListComponent,
     NewsItemComponent,
     SourceListComponent,
-    SourceListItemComponent
+    SourceListItemComponent,
+    SourceDetailPageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpModule,
     BrowserAnimationsModule,
-    MdCardModule,
-    MdSidenavModule
+    MdSidenavModule,
+    MdGridListModule
   ],
   providers: [NewsService],
   bootstrap: [AppComponent]

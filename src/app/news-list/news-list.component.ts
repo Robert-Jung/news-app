@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NewsService } from '../core/news.service'
-import { ActivatedRoute } from '@angular/router'
+import { ActivatedRoute, Params } from '@angular/router'
 
 @Component({
   selector: 'app-news-list',
@@ -8,16 +8,16 @@ import { ActivatedRoute } from '@angular/router'
   styleUrls: ['./news-list.component.css']
 })
 export class NewsListComponent implements OnInit {
-
   articles: Array<any>;
+  defaultSource = 'techcrunch'
 
   constructor(private newsAPI:NewsService, private route:ActivatedRoute) { }
 
   ngOnInit() {
-    this.newsAPI.getNewsItems()
+      this.newsAPI.getNewsItems(this.defaultSource)
       .subscribe(data => {
-        this.articles = data.articles;
-        console.log(this.articles)
-      })
+      this.articles = data.articles;
+    })
   }
+
 }
