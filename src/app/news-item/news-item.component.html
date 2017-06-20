@@ -1,4 +1,4 @@
- <div class="container">
+ <div class="container" (click)=goToArticle(article.url)>
     <img [src]="article.urlToImage" class="image">
     <div class="overlay">
         <div class="text">{{article.title}}</div>

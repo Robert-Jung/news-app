@@ -29,4 +29,8 @@ export class SourceDetailPageComponent implements OnInit {
     })
   }
 
+  goToArticle(URL) {
+    window.open(URL)
+  }
+
 }

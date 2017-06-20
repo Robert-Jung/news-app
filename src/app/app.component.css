@@ -5,3 +5,9 @@ md-sidenav {
 md-sidenav-container {
     background-color: #3D3C3A;
 }
+
+h1 {
+    color: #D3D3D3;
+    text-align: center;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}

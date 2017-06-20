@@ -13,4 +13,7 @@ export class NewsItemComponent implements OnInit {
   ngOnInit() {
   }
 
+  goToArticle(URL) {
+    window.open(URL)
+  }
 }

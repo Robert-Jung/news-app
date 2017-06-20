@@ -4,10 +4,12 @@
         <md-grid-list cols="3" rowHeight="1:1">
         <md-grid-tile
         *ngFor="let article of articles" >
-            <div class="container">
+            <div class="container" (click)=goToArticle(article.url)>
                 <img [src]="article.urlToImage" class="image">
                 <div class="overlay">
-                    <div class="text">{{article.title}}</div>
+                    <div class="text">
+                        {{article.title}}
+                    </div>
                 </div>
             </div>
         </md-grid-tile>
