@@ -6,6 +6,7 @@ img {
 .container {
     position: relative;
     width: 100%;
+    padding: 10px;
 }
 
 .image {
@@ -38,5 +39,7 @@ img {
 .text {
   width: 300px;
   color: white;
-  font-size: 25px;
+  font-size: 20px;
+  text-align: center;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
 }
