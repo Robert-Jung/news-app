@@ -5,16 +5,16 @@ import 'rxjs/add/operator/map'
 @Injectable()
 export class NewsService {
 
-  baseURL = 'https://newsapi.org/v1/articles?source=business-insider'
+  baseURL = 'https://newsapi.org/v1/articles?';
   apiKey = '66e2c8980e0d4b83a5e0c737837c06ec';
-  sourceURL = 'https://newsapi.org/v1/sources'
+  sourceURL = 'https://newsapi.org/v1/sources';
 
   constructor(private http: Http) {
   }
 
-  getNewsItems() {
+  getNewsItems(source) {
     return this.http
-      .get(`${this.baseURL}&apiKey=${this.apiKey}`)
+      .get(`${this.baseURL}source=${source}&apiKey=${this.apiKey}`)
       .map((res) => res.json())
   }
 
@@ -23,4 +23,5 @@ export class NewsService {
       .get(`${this.sourceURL}`)
       .map((res) => res.json())
   }
+
 }

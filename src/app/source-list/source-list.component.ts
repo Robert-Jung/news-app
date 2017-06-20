@@ -26,8 +26,6 @@ export class SourceListComponent implements OnInit {
     this.newsAPI.getNewsSource()
       .subscribe(data => {
         this.nameList = data.sources
-        console.log(this.nameList)
       })
   }
-
 }

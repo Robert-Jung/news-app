@@ -4,7 +4,7 @@ import { Component, OnInit, Input } from '@angular/core';
   selector: 'app-source-list-item',
   template: `
   <button md-raised-button
-  (click)="changeSource()">
+  (click)= a [routerLink] = "['/articles', name.id]">
     {{ name.name }}
   </button>`,
   styles: [`
@@ -22,12 +22,9 @@ import { Component, OnInit, Input } from '@angular/core';
     }
   `]
 })
+
 export class SourceListItemComponent implements OnInit {
   @Input() name;
-
-  changeSource() {
-    console.log('change source')
-  }
 
   constructor() { }
 
